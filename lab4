@@ -1,0 +1,14 @@
+def average_digit_sum(a, b):
+    def sum_digits(n):
+        return sum(int(digit) for digit in str(abs(n)))
+
+    return (sum_digits(a) + sum_digits(b)) / 2
+
+try:
+    num1 = int(input("Введите первое целое число: "))
+    num2 = int(input("Введите второе целое число: "))
+
+    result = average_digit_sum(num1, num2)
+    print(f"Среднее арифметическое сумм цифр: {result}")
+except ValueError:
+    print("Ошибка: 1ужно вводить только целые числа.")
